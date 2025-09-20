@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushiMonsters - Доставка смачних суші</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Sushi<span>Monsters</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#cart">Кошик</a></li>
+                <li><a href="#about">Про нас</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="login-btn">Увійти</button>
+            <button id="register-btn">Реєстрація</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero" id="home">
+            <h1>Смачні суші для справжніх монстрів</h1>
+            <p>Замовляйте улюблені сети з доставкою додому. Акції та знижки для постійних клієнтів!</p>
+            <a href="#menu" class="btn">Перейти до меню</a>
+        </section>
+
+        <section id="menu">
+            <h2 class="section-title">Наші сети</h2>
+            <div class="sushi-sets" id="sushi-sets-container">
+                <!-- Сети суші будуть додані через JavaScript -->
+            </div>
+        </section>
+
+        <section id="cart">
+            <h2 class="section-title">Ваш кошик</h2>
+            <div class="cart-section">
+                <div class="cart-items" id="cart-items">
+                    <!-- Товари в кошику будуть додані через JavaScript -->
+                    <p class="empty-cart-message">Ваш кошик порожній</p>
+                </div>
+                <div class="cart-total" id="cart-total">Загальна сума: 0 грн</div>
+                <button class="checkout-btn" id="checkout-btn">Оформити замовлення</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Модальне вікно реєстрації -->
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-register">&times;</span>
+            <h2>Реєстрація</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="reg-name">Ім'я</label>
+                    <input type="text" id="reg-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" id="reg-password" required>
+                </div>
+                <button type="submit" class="form-submit">Зареєструватися</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальне вікно входу -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-login">&times;</span>
+            <h2>Вхід</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="form-submit">Увійти</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 SushiMonsters - Всі права захищені</p>
+        <p>Телефон: +380 (12) 345-67-89 | Email: info@sushimonsters.ua</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
